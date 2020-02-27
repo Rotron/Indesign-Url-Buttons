@@ -8,11 +8,6 @@ var myPage = myDocument.pages.item(0);
 var myButton = myPage.buttons.add({geometricBounds:[72, 72, 144, 144]});
 myButton.gotoURLBehaviors.add({behaviorEvent:BehaviorEvents.mouseUp, url:"swwww"});
 */
-
-
-
-
-
     var script_file = File($.fileName); // get the location of the script file
     var script_file_path = script_file.path; // get the path
 
@@ -24,29 +19,23 @@ myButton.gotoURLBehaviors.add({behaviorEvent:BehaviorEvents.mouseUp, url:"swwww"
           file_to_read.open('r'); // open it
           content = file_to_read.read(); // read it
           my_JSON_object =  JSON.parse(content);// now evaluate the string from the file
-        // alert(my_JSON_object.toSource()); // if it all went fine we have now a JSON Object instead of a string call length
-        
+       
+for (var key in my_JSON_object) {
+   if (my_JSON_object.hasOwnProperty(key)) {
+         //alert(my_JSON_object[key].link[0]);
 
+    var myButton = myPage.buttons.add({geometricBounds:[0  +  Math.floor(Math.random() * 100) + 1, 0,          10 + Math.floor(Math.random() * 100) + 1, 50]});
+    myButton.gotoURLBehaviors.add({behaviorEvent:BehaviorEvents.mouseUp, url:my_JSON_object[key].link1.split('"').join('')});
+   }
+} 
 
         
-          var linka = JSON.stringify(my_JSON_object["link"][0]);
 
           file_to_read.close(); // always close files after reading
        
           }else{
           alert("Bah!"); // if something went wrong
     }
-
-alert(linka);
-var myButton = "";
-var i;
-for (i = 1; i < 12; i++) {
-//  myButton += "The number is " + i + "<br>";
-
-  var myButton = myPage.buttons.add({geometricBounds:[0  + i * 10, 0,          10 + i * 10, 50]});
-	  myButton.gotoURLBehaviors.add({behaviorEvent:BehaviorEvents.mouseUp, url:linka.split('"').join('')});
-
-}
 
 
 
