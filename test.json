@@ -1,4 +1,20 @@
-{
+[
+	{
 "link":["http://test.com/dcklo49gerg/geg_%5325.html","http://test2.com","http://test3.com","http://test4.com"],
-"link1":"test2"
-}   
+"link1":"http://link1.com"
+},
+{
+"link":["333","ccm","htcm","http://test4.com"],
+"link1":"http://link2.com"
+},
+{
+"link":["333","ccm","htcm","http://test4.com"],
+"link1":"http://link3.com"
+}
+,
+{
+"link":["333","ccm","htcm","http://test4.com"],
+"link1":"http://link4.com"
+}
+
+]   
