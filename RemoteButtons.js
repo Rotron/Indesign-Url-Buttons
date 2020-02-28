@@ -1,4 +1,4 @@
-# include "json2.js"
+#include "json2.js"
 var myDocument = app.documents.add();
 var myPage = myDocument.pages.item(0);
 
